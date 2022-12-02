@@ -4,9 +4,9 @@
 # WARNING! All changes made in this file will be lost!
 
 from PySide6 import QtCore
-from model import TestModel
+
 qt_resource_data = b"\
-\x00\x00\x01\xaa\
+\x00\x00\x02\xd7\
 /\
 / Copyright (C) \
 2021 The Qt Comp\
@@ -29,12 +29,31 @@ sible: true\x0d\x0a   \
  title: \x22Qt Quic\
 k Controls\x22\x0d\x0a\x0d\x0a \
    TestModel{\x0d\x0a \
-       Component\
-.onCompleted:{\x0d\x0a\
-            cons\
-ole.log(11111111\
-111)\x0d\x0a        }\x0d\
-\x0a    }\x0d\x0a}\
+       id: testM\
+odel\x0d\x0a        Co\
+mponent.onComple\
+ted:{\x0d\x0a         \
+   console.log(1\
+1111111111)\x0d\x0a   \
+     }\x0d\x0a    }\x0d\x0a\x0d\
+\x0a    Button {\x0d\x0a \
+       id: syncB\
+tn\x0d\x0a        text\
+: \x22\xe5\x90\x8c\xe6\xad\xa5\xe6\x8c\x89\xe9\x92\xae\x22\
+\x0d\x0a        onClic\
+ked:{\x0d\x0a         \
+   testModel.syn\
+c()\x0d\x0a        }\x0d\x0a\
+    }\x0d\x0a\x0d\x0a    But\
+ton {\x0d\x0a        i\
+d: asyncBtn\x0d\x0a   \
+     text: \x22\xe5\xbc\x82\xe6\
+\xad\xa5\xe6\x8c\x89\xe9\x92\xae\x22\x0d\x0a     \
+   onClicked:{\x0d\x0a\
+            test\
+Model.async_req(\
+)\x0d\x0a        }\x0d\x0a  \
+  }\x0d\x0a}\
 "
 
 qt_resource_name = b"\
@@ -54,7 +73,7 @@ qt_resource_struct = b"\
 \x00\x00\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x02\
 \x00\x00\x00\x00\x00\x00\x00\x00\
 \x00\x00\x00\x0c\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\
-\x00\x00\x01\x84\xcd\xe3\xb1\xf3\
+\x00\x00\x01\x84\xd2\xbd\xb1v\
 "
 
 def qInitResources():

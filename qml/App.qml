@@ -15,8 +15,27 @@ ApplicationWindow {
     title: "Qt Quick Controls"
 
     TestModel{
+        id: testModel
         Component.onCompleted:{
             console.log(11111111111)
+        }
+    }
+
+    Column {
+        Button {
+            id: syncBtn
+            text: "同步按钮"
+            onClicked:{
+                testModel.sync()
+            }
+        }
+
+        Button {
+            id: asyncBtn
+            text: "异步按钮"
+            onClicked:{
+                testModel.async_req()
+            }
         }
     }
 }
